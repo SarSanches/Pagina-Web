@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css'
+    rel='stylesheet'>
+
+  <link rel="stylesheet" href="../Static/css/meni.css">
+
+    
+    <title>Carrito de Compras</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI';
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        h1 {
+            font-family: 'Impact', sans-serif;
+            font-size: 55px;
+            color: transparent;
+            -webkit-text-stroke: 2px #000;
+            text-align: center; /* Centra el texto horizontalmente */
+        }
+
+        #carritoContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .producto {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .producto img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+
+        .producto p {
+            margin: 5px 0;
+        }
+
+        #limpiarCarritoBtn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ff6347;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #limpiarCarritoBtn:hover {
+            background-color: #d62c00;
+        }
+
+        #totalCarrito {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        #mensajeCarritoVacio {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar close">
+        <div class="logo-details">
+          <i class='bx bxl-kickstarter bx-tada' style='color:#080808'></i>
+          <span class="logo_name"style='color:#080808'>Cute Shop</span>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="../Template/Inicio.html">
+              <i class='bx bx-grid-alt' ></i>
+              <span class="link_name">Menu</span>
+            </a>
+            <ul class="sub-menu blank">
+              <li><a class="link_name" href="../Template/Inicio.html">Menu</a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="iocn-link">
+              <a href="#">
+                <i class='bx bx-collection' ></i>
+                <span class="link_name">Categoría</span>
+              </a>
+              <i class='bx bxs-chevron-down arrow' ></i>
+            </div>
+            <ul class="sub-menu">
+              <li><a class="link_name" href="#">Categoría</a></li>
+              <li><a href="../Template/Impresoras.html">Impresoras</a></li>
+              <li><a href="../Template/Papeleria.html">Papeleria</a></li>
+              <li><a href="../Template/Juguetes.html">Jugetes</a></li>
+              <li><a href="../Template/Para tu computadora.html">Para computadora</a></li>
+              <li><a href="../Template/Peluches.html">Peluches</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="../Template/Carrito.html">
+              <i class='bx bxs-cart' ></i>
+              <span class="link_name">Carrito</span>
+            </a>
+            <ul class="sub-menu blank">
+              <li><a class="link_name" href="../Template/Carrito.html">Carrito</a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="iocn-link">
+              <a href="#">
+                <i class='bx bxs-user-voice'></i>
+                <span class="link_name">Clientes</span>
+              </a>
+              <i class='bx bxs-chevron-down arrow' ></i>
+            </div>
+            <ul class="sub-menu">
+              <li><a class="link_name" href="#">Clientes</a></li>
+              <li><a href="../Template/Inicio.html">Sub Menú 1</a></li>
+              <li><a href="#">Sub Menú 2</a></li>
+              <li><a href="#">Sub Menú 3</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">
+              <i class='bx bxs-contact' ></i>
+              <span class="link_name">Contactos</span>
+            </a>
+            <ul class="sub-menu blank">
+              <li><a class="link_name" href="#">Contactos</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">
+              <i class='bx bxs-edit-location'></i>
+              <span class="link_name">Sedes</span>
+            </a>
+            <ul class="sub-menu blank">
+              <li><a class="link_name" href="../Template/Inicio.html">Sedes</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">
+              <i class='bx bx-cog' ></i>
+              <span class="link_name">Configuración</span>
+            </a>
+            <ul class="sub-menu blank">
+              <li><a class="link_name" href="#">Configuración</a></li>
+            </ul>
+          </li>
+          <li>
+        <div class="profile-details">
+          <div class="profile-content">
+            <img src="image/profile.jpg" alt="profileImg">
+          </div>
+          <div class="name-job">
+            <div class="profile_name">Usuario</div>
+          </div>
+          <i class='bx bx-log-out' ></i>
+        </div>
+      </li>
+    </ul>
+      </div>
+      <section class="home-section">
+        <div class="home-content">
+          <i class='bx bx-menu' ></i>
+          
+        </div>
+    <h1>Carrito de Compras</h1>
+    <div id="carritoContainer"></div>
+    <div id="totalCarrito"></div>
+    <div id="mensajeCarritoVacio"></div>
+    <button id="limpiarCarritoBtn" onclick="limpiarCarrito()">Limpiar Carrito</button>
+
+    <script>
+        function cargarCarrito() {
+            let productos = JSON.parse(localStorage.getItem('carrito')) || [];
+            let carritoContainer = document.getElementById('carritoContainer');
+            carritoContainer.innerHTML = '';
+
+            if (productos.length === 0) {
+                document.getElementById('mensajeCarritoVacio').innerText = 'No hay productos en tu carrito.';
+                document.getElementById('totalCarrito').innerText = 'Total: 0 pesos';
+                return;
+            }
+
+            document.getElementById('mensajeCarritoVacio').innerText = ''; // Limpiar el mensaje de carrito vacío
+
+            let total = 0;
+
+            productos.forEach(producto => {
+                let productoDiv = document.createElement('div');
+                productoDiv.className = 'producto';
+
+                productoDiv.innerHTML = `
+                    <img src="${producto.imagen}" alt="${producto.nombre}">
+                    <p>${producto.nombre}</p>
+                    <p>Precio: ${producto.precio}</p>
+                `;
+                carritoContainer.appendChild(productoDiv);
+
+                total += parseInt(producto.precio);
+            });
+
+            document.getElementById('totalCarrito').innerText = `Total: ${total} pesos`;
+        }
+
+        function limpiarCarrito() {
+            localStorage.removeItem('carrito');
+            cargarCarrito(); // Actualizar la vista del carrito después de limpiarlo
+        }
+
+        document.addEventListener('DOMContentLoaded', cargarCarrito);
+    </script>
+    <script src="../Static/js/meni.js"></script>
+</body>
+</html>

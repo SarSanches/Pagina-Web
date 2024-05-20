@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<!--para iniciar este contiene todo mi codigo-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Corregido -->
+  <title>Para tu computadora</title>
+  <link rel="shortcut icon" href="../Static/img/icono.png" type="image/x-icon"> <!-- Corregido -->
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css'
+    rel='stylesheet'>
+
+  <link rel="stylesheet" href="../Static/css/meni.css">
+
+  <link rel="stylesheet" href="../Static/css/card.css">
+
+</head>
+<body>
+  <div class="sidebar close">
+    <div class="logo-details">
+      <i class='bx bxl-kickstarter bx-tada' style='color:#080808'></i>
+      <span class="logo_name"style='color:#080808'>Cute Shop</span>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="../Template/Inicio.html">
+          <i class='bx bx-grid-alt' ></i>
+          <span class="link_name">Menu</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="../Template/Inicio.html">Menu</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <i class='bx bx-collection' ></i>
+            <span class="link_name">Categoría</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Categoría</a></li>
+          <li><a href="../Template/Impresoras.html">Impresoras</a></li>
+          <li><a href="../Template/Papeleria.html">Papeleria</a></li>
+          <li><a href="../Template/Juguetes.html">Jugetes</a></li>
+          <li><a href="../Template/Para tu computadora.html">Para computadora</a></li>
+          <li><a href="../Template/Peluches.html">Peluches</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="../Template/Carrito.html">
+          <i class='bx bxs-cart' ></i>
+          <span class="link_name">Carrito</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="../Template/Carrito.html">Carrito</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <i class='bx bxs-user-voice'></i>
+            <span class="link_name">Clientes</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Clientes</a></li>
+          <li><a href="../Template/Inicio.html">Sub Menú 1</a></li>
+          <li><a href="#">Sub Menú 2</a></li>
+          <li><a href="#">Sub Menú 3</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bxs-contact' ></i>
+          <span class="link_name">Contactos</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Contactos</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bxs-edit-location'></i>
+          <span class="link_name">Sedes</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="../Template/Inicio.html">Sedes</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-cog' ></i>
+          <span class="link_name">Configuración</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Configuración</a></li>
+        </ul>
+      </li>
+      <li>
+    <div class="profile-details">
+      <div class="profile-content">
+        <img src="image/profile.jpg" alt="profileImg">
+      </div>
+      <div class="name-job">
+        <div class="profile_name">Usuario</div>
+      </div>
+      <i class='bx bx-log-out' ></i>
+    </div>
+  </li>
+</ul>
+  </div>
+  <section class="home-section">
+    <div class="home-content">
+      <i class='bx bx-menu' ></i>
+      
+    </div>
+    <h1>Para tu computadora</h1>
+    <div class="contenedorCards">
+      <!-- Repite el div.card para cada producto -->
+      <div class="card">
+          <div class="wrapper">
+              <div class="colorProd" style="background-color: #ffffff;"></div>
+              <div class="imgProd" style="background-image: url(../Static/img/para1.webp);"></div>
+              <div class="infoProd">
+                  <p class="nombreProd">Teclado mecanico rosa</p>
+                  <p class="extraInfo">Fecha de salida: 31/03/2021</p>
+                  <div class="actions">
+                      <div class="preciosGrupo">
+                          <p class="precio precioOferta">2,000</p>
+                          <p class="precio precioProd">1,000</p>
+                      </div>
+                      <div class="icono action alCarrito">
+                          <button onclick="agregarAlCarrito('Teclado mecanico rosa', '1,000', '../Static/img/para1.webp')">
+                              Agregar al carrito
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="card">
+        <div class="wrapper">
+            <div class="colorProd" style="background-color: #ffffff;"></div>
+            <div class="imgProd" style="background-image: url(../Static/img/para2.webp);"></div>
+            <div class="infoProd">
+                <p class="nombreProd">Mouse en forma de raton</p>
+                <p class="extraInfo">Fecha de salida: 31/03/2021</p>
+                <div class="actions">
+                    <div class="preciosGrupo">
+                       
+                        <p class="precio precioProd">500</p>
+                    </div>
+                    <div class="icono action alCarrito">
+                        <button onclick="agregarAlCarrito('Mouse en forma de raton', '500', '../Static/img/para2.webp')">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+      <div class="wrapper">
+          <div class="colorProd" style="background-color: #ffffff;"></div>
+          <div class="imgProd" style="background-image: url(../Static/img/para5.webp);"></div>
+          <div class="infoProd">
+              <p class="nombreProd">Mouse pad</p>
+              <p class="extraInfo">Fecha de salida: 31/03/2021</p>
+              <div class="actions">
+                  <div class="preciosGrupo">
+                      <p class="precio precioOferta">550</p>
+                      <p class="precio precioProd">400</p>
+                  </div>
+                  <div class="icono action alCarrito">
+                      <button onclick="agregarAlCarrito('Mouse pad', '400', '../Static/img/para5.webp')">
+                          Agregar al carrito
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+      </div>
+  </section>
+        
+        
+      </div>
+    </header>
+
+      
+    
+
+    <br>
+    <br>
+    
+  </selection>
+  <script>
+    function agregarAlCarrito(nombre, precio, imagen) {
+        let productos = JSON.parse(localStorage.getItem('carrito')) || [];
+        productos.push({ nombre, precio, imagen });
+        localStorage.setItem('carrito', JSON.stringify(productos));
+        alert('Producto agregado al carrito');
+    }
+</script>
+  
+  <script src="../Static/js/main.js"></script>
+  <script src="../Static/js/meni.js"></script>
+  <script src="../Static/js/carrito.js"></script>
+
+
+
+
+  <script src="../Static/js/cad.js"></script>
+
+</body>
+</html>
